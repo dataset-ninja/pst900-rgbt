@@ -1,5 +1,17 @@
+The authors introduce a **PST900 RGB-T: Penn Subterranean Thermal 900 RGB-Thermal Dataset** of 894 aligned pairs of RGB and Thermal images with per-pixel human annotations of 4 visible artifacts: *fire extinguisher*, *backpack*, *hand drill*, *rescue randy*, driven by the requirements of the [DARPA Subterranean Challenge](https://www.subtchallenge.com/). The sensor head includes a Stereolabs ZED Mini stereo camera and a FLIR Boson 320 camera, and a calibration procedure is designed to obtain camera intrinsics and system extrinsics. The dataset is collected from various environments, including the Number 9 Coal Mine in Lansford, PA, cluttered indoor and outdoor spaces. In addition to the RGB-Thermal data, a larger set of similarly annotated RGB-only data is provided.
 
-Sample image template:
-<img src="https://github.com/dataset-ninja/gland-segmentation/assets/78355358/f158d0dd-71d5-41a2-aba5-4a5f57d54c35" alt="image" width="800">
+<img src="https://github.com/dataset-ninja/pst900-rgbt/assets/78355358/0d593488-7f74-4c4e-b35c-087aafecabcf" alt="image" width="400">
 
-<span style="font-size: smaller; font-style: italic;">Image description.</span>
+<span style="font-size: smaller; font-style: italic;"><i>Left</i> - Quadruped mobile robot platform for data collection; sensor head includes a Stereolabs Zed Mini Stereo RGB camera, FLIR Boson 320 and an active illumintation setup. <i>Right</i> - example RGB and Thermal imagery, with a human annotated segmentation label at the bottom.</span>
+
+In their work, the authors propose long-wave infrared (LWIR) imagery as a viable supporting modality for semantic segmentation using learning-based techniques. They address the issue of RGB-thermal camera calibration by introducing a passive calibration target and procedure that is both portable and easy to use.
+
+<img src="https://github.com/dataset-ninja/pst900-rgbt/assets/78355358/a5c99248-3f19-4078-86b1-d73241bc75b8" alt="image" width="800">
+
+<span style="font-size: smaller; font-style: italic;"></i>The first row contains example RGB image data captured from the Stereolabs Zed Mini camera. The second row contains aligned thermal imagery (visualized in 8-bit color) captured from the FLIR Boson camera. The last row contains human annotated per-pixel labels for each of the four classes.</span>
+
+The ability to parse raw imagery and ascertain pixel-wise and region-wise semantic information is desirable for environment perception enabling advanced robot autonomy. Semantic segmentation is a major subject of robotics research with applications ranging from medicine and agriculture to autonomous vehicles. Convolutional neural networks (CNNs) have been popularly applied to image classification tasks, demonstrating significant improvements over classical methods. Recently, the focus has shifted to semantic segmentation from RGB imagery, driven by the growth in autonomous vehicle research.
+
+The authors highlight the increasing accessibility of thermal cameras, once primarily used by the military, and propose their usage in challenging environments, particularly those with visibility and illumination limitations, such as underground tunnels, mines, and caves. They argue that long-wave infrared spectrum information can enhance segmentation accuracy in such environments, especially since it is not dependent on visible spectrum illumination. The authors demonstrate that the fusion of thermal information improves the segmentation of objects without distinct thermal signatures.
+
+The authors acknowledge that collecting large amounts of RGB data and obtaining accurate per-pixel human annotations is more feasible than doing so for calibrated and aligned RGB-Thermal data. They design a network with an independent RGB stream that can be trained without thermal data and introduce the thermal modality to improve the results. The proposed sequential, dual stream architecture draws influence from ResNet-18, UNet, and ERFNet, demonstrating efficiency, flexibility, and accuracy on their dataset.
