@@ -1,6 +1,6 @@
 Dataset **PST900 RGB-T** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/p/p/Xx/5r5ccLmz028GhCLUZREyUJfXZU7DnuwYx2JsDzUrTM0RG8tdxH8gZvWGhcAgD0PlDTSGhwuY4K2xOrNfsufeZ0dnEhtOJOrrDwmbLHmK1WsHv5MmNlZoEvtpAiJF.tar)
+ [Download](https://www.dropbox.com/scl/fi/djx1ctazke46mem57e9z8/pst900-rgbt-DatasetNinja.tar?rlkey=z6y50ubzck4akj5yu3ka0ngli&dl=1)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
