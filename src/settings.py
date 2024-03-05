@@ -84,7 +84,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.upenn.edu/"]
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
     "__PRETEXT__": "Every quartet of images (RGB, depth, thermal, and thermal_raw) has ***im_id*** tag"
 }
-TAGS: Optional[List[str]] = None
+TAGS: Optional[List[str]] = ['multi-view']
 
 
 SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = None
